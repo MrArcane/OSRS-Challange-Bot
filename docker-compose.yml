@@ -1,0 +1,11 @@
+services:
+  osrs-challenge-bot:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - osrs-bot-data:/app/data
+
+volumes:
+  osrs-bot-data:
